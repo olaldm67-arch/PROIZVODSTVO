@@ -1,0 +1,181 @@
+09:20:33 | ============================================================
+09:20:33 | CCalc_Sync  |  2026-10-14 09:20:33
+09:20:33 | Лог: c:\Users\S1\Desktop\cod_p\ccalc_sync_20261014.log
+09:20:33 | ============================================================
+09:20:33 | ============================================================
+09:20:33 | ▶ МИГРАЦИЯ DBF -> CCALC
+09:20:33 |    Папка: \\sp-roshan-03\Ccalc6.80\Data
+09:20:33 |    Читаю BASE1.DBF...
+09:20:33 |    Заказов в DBF  : 1,090
+09:20:36 | ============================================================
+09:20:36 | CCalc_Sync  |  2026-10-14 09:20:36
+09:20:36 | Лог: C:\Users\S1\Desktop\cod_p\ccalc_sync_20261014.log
+09:20:36 | ============================================================
+09:20:36 | ============================================================
+09:20:36 | ▶ МИГРАЦИЯ DBF -> CCALC
+09:20:36 |    Папка: \\sp-roshan-03\Ccalc6.80\Data
+09:20:36 |    Читаю BASE1.DBF...
+09:20:36 |    Заказов в DBF  : 1,090
+09:20:54 | ❌ Фатальная ошибка: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+Traceback (most recent call last):
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 795, in open_connection
+    self.sock.connect(sockaddr)
+TimeoutError: [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 321, in main
+    run_migrate()
+  File "c:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 242, in run_migrate
+    conn = connect(SRC_DB)
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 154, in connect
+    return mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\pooling.py", line 323, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 185, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 411, in _open_connection
+    raise err
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 382, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 797, in open_connection
+    raise ConnectionTimeoutError(
+mysql.connector.errors.ConnectionTimeoutError: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+09:20:57 | ❌ Фатальная ошибка: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+Traceback (most recent call last):
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 795, in open_connection
+    self.sock.connect(sockaddr)
+TimeoutError: [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 321, in main
+    run_migrate()
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 242, in run_migrate
+    conn = connect(SRC_DB)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 154, in connect
+    return mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\pooling.py", line 323, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 185, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 411, in _open_connection
+    raise err
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 382, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 797, in open_connection
+    raise ConnectionTimeoutError(
+mysql.connector.errors.ConnectionTimeoutError: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+09:21:38 | ============================================================
+09:21:38 | CCalc_Sync  |  2026-10-14 09:21:38
+09:21:38 | Лог: C:\Users\S1\Desktop\cod_p\ccalc_sync_20261014.log
+09:21:38 | ============================================================
+09:21:38 | ============================================================
+09:21:38 | ▶ МИГРАЦИЯ DBF -> CCALC
+09:21:38 |    Папка: \\sp-roshan-03\Ccalc6.80\Data
+09:21:38 |    Читаю BASE1.DBF...
+09:21:39 |    Заказов в DBF  : 1,090
+09:22:00 | ❌ Фатальная ошибка: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+Traceback (most recent call last):
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 795, in open_connection
+    self.sock.connect(sockaddr)
+TimeoutError: [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 321, in main
+    run_migrate()
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 242, in run_migrate
+    conn = connect(SRC_DB)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\S1\Desktop\cod_p\migration_dbf2.0.py", line 154, in connect
+    return mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\pooling.py", line 323, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 185, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 411, in _open_connection
+    raise err
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\connection.py", line 382, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\S1\AppData\Local\Programs\Python\Python312-32\Lib\site-packages\mysql\connector\network.py", line 797, in open_connection
+    raise ConnectionTimeoutError(
+mysql.connector.errors.ConnectionTimeoutError: 2003: Can't connect to MySQL server on '192.168.0.10:3306' (Errno 10060: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера)
+09:24:03 | ============================================================
+09:24:03 | CCalc_Sync  |  2026-10-14 09:24:03
+09:24:03 | Лог: C:\Users\S1\Desktop\cod_p\ccalc_sync_20261014.log
+09:24:03 | ============================================================
+09:24:03 | ============================================================
+09:24:03 | ▶ МИГРАЦИЯ DBF -> CCALC
+09:24:03 |    Папка: \\sp-roshan-03\Ccalc6.80\Data
+09:24:03 |    Читаю BASE1.DBF...
+09:24:03 |    Заказов в DBF  : 1,090
+09:24:03 | package: mysql.connector.plugins
+09:24:03 | plugin_name: caching_sha2_password
+09:24:03 | AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+09:24:03 |    Заказов в БД   : 1,122
+09:24:03 |    Новых заказов  : 27
+09:24:03 |    BASE1: мигрирую...
+09:24:03 |    BASE1: добавлено 27
+09:24:03 |    BASE3: мигрирую...
+09:24:14 |    BASE3: добавлено 3,407
+09:24:14 |    BASE4: мигрирую...
+09:24:18 |    BASE4: добавлено 77
+09:24:18 |    BASE6: мигрирую...
+09:24:19 |    BASE6: добавлено 179
+09:24:19 |    BASE7: мигрирую...
+09:25:29 |    BASE7: добавлено 39,649
+09:25:29 |    BASE8: мигрирую...
+09:25:29 |    BASE8: добавлено 88
+09:25:29 |    BASE10: мигрирую...
+09:25:30 |    BASE10: добавлено 22
+09:25:30 |    BASE14: мигрирую...
+09:25:54 |    BASE14: добавлено 11,863
+09:25:54 | ✅ Миграция завершена за 111.2 сек
+09:25:54 | ============================================================
+09:25:54 | ▶ ГЕНЕРАЦИЯ ОТЧЁТОВ в workshop
+09:25:54 |    Состав: CCALC, CCALC_FRN, CCALC_SP, CCALC_TBL
+09:25:54 | ────────────────────────────────────────────────────────────
+09:25:54 | ▶ Отчёт CCALC
+09:25:54 |    Строк до     : 64,788
+09:25:55 |    Добавлено    : 7,368
+09:25:55 |    Строк после  : 72,156  (+7,368)
+09:25:55 | ✅ CCALC за 0.9 сек
+09:25:55 | ────────────────────────────────────────────────────────────
+09:25:55 | ▶ Отчёт CCALC_FRN
+09:25:55 |    Строк до     : 4,402
+09:25:55 |    Добавлено    : 88
+09:25:55 |    Строк после  : 4,490  (+88)
+09:25:55 | ✅ CCALC_FRN за 0.0 сек
+09:25:55 | ────────────────────────────────────────────────────────────
+09:25:55 | ▶ Отчёт CCALC_SP
+09:25:55 |    Строк до     : 14,535
+09:25:56 |    Добавлено    : 1,598
+09:25:56 |    Строк после  : 16,133  (+1,598)
+09:25:56 | ✅ CCALC_SP за 0.9 сек
+09:25:56 | ────────────────────────────────────────────────────────────
+09:25:56 | ▶ Отчёт CCALC_TBL
+09:25:56 |    Строк до     : 788,827
+09:30:43 |    Добавлено    : 11,863
+09:30:43 |    Строк после  : 800,690  (+11,863)
+09:30:43 | ✅ CCALC_TBL за 287.3 сек
+09:30:43 | ✅ Все отчёты за 289.3 сек
+09:30:43 | ============================================================
+09:30:43 | 🏁 Всё готово за 400.5 сек
